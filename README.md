@@ -37,3 +37,15 @@ python main.py
   Sprache etc.) und schneidet ab dem erkannten Jahr ab.
 - Scan läuft in einem Hintergrund-Thread, GUI bleibt bedienbar (inkl. Stop-Button).
 - Aktuell nur Filme (keine Serien-Erkennung).
+- Mehrere Ordner/Festplatten können nacheinander gescannt werden - die Ergebnisse
+  werden in der Liste angehängt, nicht überschrieben. Über "Liste leeren" kann die
+  Ansicht bei Bedarf komplett zurückgesetzt werden (die gespeicherten Kataloge pro
+  Festplatte bleiben davon unberührt).
+- Über das Dropdown **"Festplatte"** kann die Ansicht auf eine einzelne Festplatte
+  eingeschränkt werden ("Alle" zeigt wieder alles an). Der Export (CSV/Excel/PDF/TXT)
+  berücksichtigt diesen Filter - bei aktivem Filter wird also nur die ausgewählte
+  Festplatte exportiert.
+- Für jeden gescannten Ordner wird ein eigener Katalog unter
+  `%USERPROFILE%\.dsk_filmkatalog\kataloge\` gespeichert. Beim erneuten Scannen
+  werden nur neu hinzugekommene Dateien abgefragt, entfernte Dateien automatisch
+  aus dem jeweiligen Katalog gelöscht.
